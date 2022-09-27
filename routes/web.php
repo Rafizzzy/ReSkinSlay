@@ -26,6 +26,10 @@ Route::get('/login', [\App\Http\Controllers\DashboardController::class,'login'])
 Route::get('/register', [\App\Http\Controllers\DashboardController::class,'register']);
 Route::get('/detail', [\App\Http\Controllers\HomepageController::class,'desc']);
 
+Route::resource('promo',\App\Http\Controllers\ProdukPromoController::class);
+Route::get('loadprodukasync/{id}',[\App\Http\Controllers\ProdukPromoController::class,'loadasync']);
+
+
 Route::group(['prefix' => 'admin'] , function(){
     Route::get('/' ,[\App\Http\Controllers\DashboardController::class,'index']);
     Route::resource('customer',\App\Http\Controllers\CustomerController::class);
@@ -48,4 +52,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
