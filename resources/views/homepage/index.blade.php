@@ -133,11 +133,7 @@
                                             <i class="text-center">Details</i>
                                         </button>
 
-                                        <button class="btn btn-warning">
-                                            <i class="text-center">Cart</i>
-                                        </button>
-                                    </div>
-                                    <div class="col-auto p-3">
+                                        
                                         <p>
                                             <del>Rp. 15.000,00</del>
                                             <br />
